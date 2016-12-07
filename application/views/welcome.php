@@ -7,9 +7,29 @@
 <a href="<?php echo base_url();?>index.php/Ticket/Index">Nieuwe ticket maken</a>
 
 <h1>Tickets</h1>
-<?php
-print_r($tickets);
-?>
+	<table border="1">  
+	      <tbody>  
+	         <tr>  
+	              
+	            <td>Category</td> 
+	            <td>Question</td> 
+	            <td>Time</td>
+	            <td>Action</td>
+	         </tr>     
+	         <?php  
+	         foreach ($getquestion as $row)  
+	         {  
+	         ?>
+	         <tr>  
+
+	        	<td><?php echo $row->category;?></td>  
+	            <td><?php echo $row->question;?></td> 
+	            <td><?php echo $row->time;?></td>
+	            <td><a href="<?php echo base_url();?>index.php/Ticket/Delete/<?php echo $row->id?>">Delete</a></td>
+			 </tr>  
+	         <?php } ?>  
+	         </tbody>
+	</table>          
 
 
 

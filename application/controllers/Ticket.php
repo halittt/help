@@ -18,19 +18,27 @@ class Ticket extends CI_Controller
 
 	public function Index()
 	{
+		
 		$this->load->model('Ticket_Model'); 
 		
 		
 		$category = $this->input->post('category');
 		$question = $this->input->post('question');
-		if ($this->input->post()){
-			$this->Ticket_Model->Question('user_id',$category,$question); 
-		}
-		
 
-		$this->load->view('newticket');
+		if ($this->input->post()){
+		$data = $this->Ticket_Model->Question('users_id',$category,$question); 
+
+		}
+		$this->load->view('newticket');	
+
+
+	}
+
+	public function Delete($id)
+	{
+		$this->load->model('Ticket_Model');
+
+		$data = $this->Ticket_Model->DelQuestions($id);
 	}
 }
-
-
 ?>

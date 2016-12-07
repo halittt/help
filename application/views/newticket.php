@@ -4,7 +4,7 @@
 
 
 <h3>Categorie:</h3>
-<form action="<?php echo site_url('User/dashboard')?>" method = "post">
+<form action="<?php echo site_url('Ticket/Index')?>" method = "post">
   <input type="radio" name="category" value="Sql" checked> SQL<br>
   <input type="radio" name="category" value="PHP"> PHP<br>
   <input type="radio" name="category" value="C#"> C#<br><br>

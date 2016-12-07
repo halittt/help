@@ -15,6 +15,7 @@ class User extends CI_Controller
 		$this->load->helper('url');
 		$this->load->library('parser');
 		$this->load->library('session');
+		$this->load->model('Ticket_Model');
     }
 
 	public function index()
@@ -86,7 +87,10 @@ class User extends CI_Controller
 	{
 		
 		$data['tickets'] = $this->User_Model->get_tickets();
+		$data['getquestion'] = $this->Ticket_Model->GetQuestions();
 		$this->load->view('welcome', $data);
+
+		
 	}
 	
 	public function logout()

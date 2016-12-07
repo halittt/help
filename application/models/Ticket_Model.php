@@ -13,6 +13,7 @@ class Ticket_Model extends CI_Model
 	
     public function Question($user_id,$category,$question) 
     {
+		
 		$data = array(
 			'users_id' => $user_id, 
 			'category' => $category,
@@ -21,7 +22,16 @@ class Ticket_Model extends CI_Model
 			);
     	
 		$result = $this->db->insert('tickets', $data);
+		return $data;
 	}
 
-	
+	public function GetQuestions(){
+		return $this->db->get('tickets')->result();
+
+	}
+
+	public function DelQuestions($id){
+		$this->db->where('id', $id);
+		$this->db->delete('tickets');
+	}
 }    
