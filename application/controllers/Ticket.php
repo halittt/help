@@ -30,8 +30,6 @@ class Ticket extends CI_Controller
 
 		}
 		$this->load->view('newticket');	
-
-
 	}
 
 	public function Delete($id)

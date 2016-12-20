@@ -1,6 +1,6 @@
 
 <html>
-<form action ="<?php echo base_url();?>index.php/User/Logout" method="POST">
+<form action ="<?php echo base_url();?>index.php/home/Logout" method="POST">
 <input type="submit" value="Logout" name="logout" >
 <p>Welkom op onze HelpSysteem</p> 
 
@@ -30,8 +30,6 @@
 	         <?php } ?>  
 	         </tbody>
 	</table>          
-
-
 
 </form>
 </html>
