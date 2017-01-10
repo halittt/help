@@ -27,9 +27,11 @@ class Ticket extends CI_Controller
 
 		if ($this->input->post()){
 		$data = $this->Ticket_Model->Question('users_id',$category,$question); 
-
+		redirect('profile/index');
 		}
 		$this->load->view('newticket');	
+
+		
 	}
 
 	public function Delete($id)
