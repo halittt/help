@@ -31,7 +31,7 @@ class Ticket extends CI_Controller
 		}
 		$this->load->view('newticket');	
 
-		
+
 	}
 
 	public function Delete($id)
@@ -39,6 +39,7 @@ class Ticket extends CI_Controller
 		$this->load->model('Ticket_Model');
 
 		$data = $this->Ticket_Model->DelQuestions($id);
+		redirect('profile/index');
 	}
 }
 ?>
